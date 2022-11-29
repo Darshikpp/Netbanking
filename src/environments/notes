@@ -1,0 +1,70 @@
+angular
+
+basic building blocks
+
+1) module - to import 3rd party modules( root module -app.module.ts)
+2)component- to create html,css and ts files
+
+Basic commands
+
+1)To create new project - ng new project_name
+2)TO create new component- ng g c component_name
+3)To run angular files -ng serve --open
+
+
+
+
+                          //Basic concept
+ 1-Data binding
+ share data between concept
+
+
+ ts-component
+ html- view
+
+ 1)one way data binding
+ data sharing only one direction(ts->html or html->ts)
+
+
+ 1.1)component to view(ts->html)
+      a)string interpolation-{{expression}}
+      b)property binding- [attribute_name]='property'   
+ 1.2)view components (html-ts) 
+     a)event binding  (even_name)="function_name()"  
+     b)event binding using $event-(event_name)="function_name($event)"   
+     c)event binding using template referencing variable - #variable_name    
+
+
+
+
+     3)ANGULAR services
+
+
+     To hold redundant data
+     to create new service --ng g s service_name
+
+     4)Depedency injection   
+
+     to share data between two depended classes
+     constructor(private ds:DataService)
+
+     5)angular directive to manipulate dom
+     a)component directives(array)
+     b)   structural directives(table)
+
+     -> *ngFor
+
+6)angular forms
+a) template driven forms(first design the html template)
+
+b) model driven forms(first design model in ts file) 
+     1)reactive forms
+     formGroup,array,control
+     for adavanced validation
+     import from reactive forms module(in app.module.ts)
+
+
+
+
+
+

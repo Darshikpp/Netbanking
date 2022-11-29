@@ -1,0 +1,30 @@
+<div class="bank">
+  <img src="../../assets/images/images.png"alt="bank" height="50px" width="50px" style="border-radius: 50%;">
+
+  <h1>My Bank</h1>
+  <form [formGroup]="registerForm">
+  <input formControlName="uname" type="text" name="username" placeholder="  User name" id="uname">
+  <div *ngIf="this.registerForm.get('uname')?.errors && this.registerForm.get('uname')?.touched" style="color: red;">Invalid user name</div>
+
+  <input  formControlName="acno" type="text" name="account number" placeholder= " Account number" id="acno">
+  <div *ngIf="this.registerForm.get('acno')?.errors && this.registerForm.get('acno')?.touched" style="color: red;">Invalid account number</div>
+
+
+  <input  formControlName="pswd" type="password"  name="password"placeholder="  Password" id="pswd">
+  <div *ngIf="this.registerForm.get('pswd')?.errors && this.registerForm.get('pswd')?.touched" style="color: red;">Invalid password</div>
+
+
+  </form>
+  <div class="terms">
+     
+      <input type="checkbox" id="checked1" value="checked1" >
+      <label for="checkbox">I agree to these <a href="#">Terms & Conditions</a></label>
+  
+  </div>
+  <button (click)="register()" type="submit" value="submit">Register</button>
+
+ <div class="member">Already a member? <a routerLink="">Sign in</a></div>
+ 
+</div>
+
+    

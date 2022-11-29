@@ -1,0 +1,19 @@
+<div class="bank">
+  <img src="../../assets/images/images.png" alt="bank" height="50px" width="50px" style="border-radius: 50%;">
+  <h1>My Bank</h1>
+  <form [formGroup]="loginForm">
+  <input formControlName="acno" name="acno" type="text" placeholder="enter account number" id="login_acno">
+  <div *ngIf="this.loginForm.get('acno')?.errors && this.loginForm.get('acno')?.touched" style="color: red;">Invalid account number</div>
+
+  <input formControlName="pswd" name="pswd" type="password" placeholder="  Password" id="login_pswd">
+  <div *ngIf="this.loginForm.get('pswd')?.errors && this.loginForm.get('pswd')?.touched" style="color: red;">Invalid password</div>
+
+
+  <div class="recover">
+      <a href="#">Forgot Password?</a>
+  </div>
+  </form>
+  <button (click)="login()">Login</button>
+  
+  <div class="member"><a routerLink="register">Sign Up</a></div>
+        </div>
