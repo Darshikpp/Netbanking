@@ -1,3 +1,4 @@
+
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
@@ -6,18 +7,26 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to right, #ccd7dc, #9cccdc, #d5ebf4);
 
 }
-/* body{
-    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-} */
+body{
+    
+  
+   
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/* body{ 
+    background-image: url('https://i.postimg.cc/PqL4pj5T/money.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; 
+ }  */
 
 .bank{
     width: 350px;
     padding: 2rem 1rem;
-    margin: 50px auto;
-    background-color: white;
+    margin: -90px auto;
+    background-image: repeating-linear-gradient(rgb(18, 166, 225) );
     border: 10px;
     text-align: center;
     box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
@@ -50,7 +59,7 @@ button{
     width: 90%;
     color: #fff;
     cursor: pointer;
-    background: blue
+    background: rgb(4, 14, 117);
 }
 
 button:hover{
@@ -95,6 +104,7 @@ input:focus{
     text-align: right;
     font-size: 0.7rem;
     margin: 0.3rem 1.4rem 0 0;
+   
 }
 
 .recover a{

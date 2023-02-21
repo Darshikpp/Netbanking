@@ -1,4 +1,5 @@
 
+
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -19,8 +20,8 @@ aim="your perfect banking partner"
 
 account="enter your account number"
 
-acno=""
-pswd=""
+acno="";
+pswd="";
 
 
 
@@ -54,7 +55,7 @@ pswd=""
 
   pswdChange(event:any)
   {
-    console.log(event);
+   
     this.pswd=event.target.value;
     console.log(this.pswd);
     
@@ -66,59 +67,31 @@ pswd=""
 
   login(){
 
-    console.log(this.loginForm);
+   
     
     //alert login clicked
-     var acno=this.loginForm.value.acno;
-     var pswd=this.loginForm.value.pswd;
      
-     if(this.loginForm.valid){
-      
-    const result=this.ds.login(acno,pswd)
-if(result){
-  alert('login successfull')
-  this.router.navigateByUrl('dashboard')
-}
-else{
-  alert('login failed')
-}
- }else{
-  alert('invalid form')
+    //  var userDetails=this.ds.userDetails;
+      if(this.loginForm.valid){
+        var acno=this.loginForm.value.acno;//1000
+        var pswd=this.loginForm.value.pswd;//1000
+    this.ds.login(acno,pswd)
+      .subscribe((result:any)=>{
+      localStorage.setItem('currentUser',JSON.stringify(result.currentUser));
+      localStorage.setItem('currentAcno',JSON.stringify(result.currentAcno));
+      localStorage.setItem('token',JSON.stringify(result.token))
+      alert(result.message);
+      this.router.navigateByUrl('dashboard')
+   },
+  result=>{
+  alert(result.error.message)
  }
+)
 }
 }
+}
 
 
 
-
-
-
-
-
-
-
-  //its a life cycle hooks of angular
-  //when the comment is created at same time it will initialize or authorized
-
-// login(){
-//   // alert("login clicked")
-//    var acno=this.acno;
-//    var pswd=this.pswd;
-//    var userDetails=this.ds.userDetails;
-
-//    if(acno in userDetails){
-//     if(pswd == userDetails[acno]['password'])
-//     {
-//       alert('login successfull');
-//       this.router.navigateByUrl('dashboard')
-//     }
-//     else{
-//       alert('invalid password')
-//     }
-//   }
-//    else{
-//     alert('invalid user details')
-//    }
-  
 
 

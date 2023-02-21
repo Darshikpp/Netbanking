@@ -1,22 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-*{
+ /* *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to right, #ccd7dc, #9cccdc, #d5ebf4);
+    font-family: 'Poppins', sans-serif;  */
+    /* background: linear-gradient(to bottom, #eff2f4, #f1f4f6, #6d7675e7);
+    background-size: cover; */
 
+.containerg{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("https://img.freepik.com/premium-vector/illustration-design-online-banking_203633-4334.jpg?w=2000");
 }
-body{
-    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-}
+
 
 .bank{
     width: 350px;
     padding: 2rem 1rem;
     margin: 50px auto;
-    background-color: white;
+    background-color: rgba(11, 35, 213, 0.416);
     border: 10px;
     text-align: center;
     box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
@@ -75,28 +84,29 @@ input:focus{
     font-size: 0.7rem;
 }
 
-.terms a{
-    color: rgb(17, 107, 143);
+/* .terms a{
+    color: rgb(227, 235, 239);
     text-decoration: none;
-}
+} */
 
-.member{
+/* .member{
     font-size: 0.8rem;
     margin-top: 1.4rem;
-    color: #636363;
-}
+    color: #eee4e4;
+} */
 .member a{
-    color: rgb(17, 107, 143);
+    color: rgb(11, 11, 11);
     text-decoration: none;
 }
 
-.recover{
+/* .recover{
     text-align: right;
     font-size: 0.7rem;
     margin: 0.3rem 1.4rem 0 0;
-}
+    
+} */
 
-.recover a{
+/* .recover a{
     text-decoration: none;
-    color: #464647;
-}
+    color: #f2f2f9;
+} */

@@ -1,22 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-*{
+/* *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to right, #ccd7dc, #9cccdc, #d5ebf4);
+    background: linear-gradient(to right, #ecf3f6, #eff3f4, #ffffff);
 
-}
-body{
+} */
+/* body{
     background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+} */
+
+
+.containerg{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("https://img.freepik.com/premium-vector/illustration-design-online-banking_203633-4334.jpg?w=2000");
 }
 
 .bank{
     width: 350px;
     padding: 2rem 1rem;
     margin: 50px auto;
-    background-color: white;
+    background-color: rgba(11, 35, 213, 0.416);
     border: 10px;
     text-align: center;
     box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
@@ -76,17 +89,17 @@ input:focus{
 }
 
 .terms a{
-    color: rgb(17, 107, 143);
+    color: rgb(241, 241, 241);
     text-decoration: none;
 }
 
 .member{
     font-size: 0.8rem;
     margin-top: 1.4rem;
-    color: #636363;
+    color: #f7f5f5;
 }
 .member a{
-    color: rgb(17, 107, 143);
+    color: rgb(13, 13, 14);
     text-decoration: none;
 }
 
@@ -98,5 +111,5 @@ input:focus{
 
 .recover a{
     text-decoration: none;
-    color: #464647;
+    color: #ccccea;
 }
